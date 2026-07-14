@@ -117,8 +117,36 @@ public class Inventario<T extends CSVConvertible & Serializable> implements Alma
 
     @Override
     public Iterator<T> iterator() {
-        return lista.iterator();
+        return new InventarioIterator();
     }
+    
+    private class InventarioIterator implements Iterator<T> {
+    private int indiceActual = 0;
+    
+    @Override
+    public boolean hasNext() {
+        return indiceActual < lista.size();
+    }
+
+    @Override
+    public T next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException("No hay más elementos en el inventario");
+        }
+        T elemento = lista.get(indiceActual);
+        indiceActual++;
+        return elemento;
+    }
+
+    @Override
+    public void remove() {
+        if (indiceActual <= 0) {
+            throw new IllegalStateException("Debe llamarse next() antes de remove()");
+        }
+        indiceActual--;
+        lista.remove(indiceActual);
+    }
+}
 
     public static void mostrarEmpleados(List<? extends Empleado> lista) {
         for (Empleado e : lista) {
