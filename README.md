@@ -31,7 +31,11 @@ Desde los botones de la interfaz se puede:
 - Guardar y cargar los datos en distintos formatos (CSV, binario, JSON)
 - Exportar un reporte en texto plano
 
-SACAR CAPTURAS!!!!
+![Tabla principal](tabla-principal.png)
+![Formulario agregar empleado](formulario-agregar.png)
+![Ordenar por salario](ordenar-salario.png)
+![Filtro de vendedores](filtro-vendedores.png)
+![Guardado exitoso](guardado-exitoso.png)
 
 ## Diagrama de clases UML
 SUBIR UML!!!!
