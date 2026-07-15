@@ -38,7 +38,7 @@ Desde los botones de la interfaz se puede:
 ![Guardado exitoso](guardado-exitoso.png)
 
 ## Diagrama de clases UML
-SUBIR UML!!!!
+![Diagrama UML](UML.png)
 
 ## Archivos generados
 El sistema genera los siguientes archivos como ejemplo de cada funcionalidad de 
